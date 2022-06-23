@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Modak&family=Montserrat&family=Seymour+One&display=swap');
+
+body{
+    margin: 0;
+    // background-color: rgb(90, 81, 75);
+    background-color: rgb(83, 73, 53);
+}
+
+a{
+    color: yellowgreen;
+    text-decoration: none;
+    &:focus,
+    &:hover {
+        color: orange;
+    }
+}
+
+#header,
+#main,
+#footer {
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+#header {
+    background-color: yellow;
+    padding: 12px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    border-radius: 0px 0px 16px 16px;
+    margin: 0px 16px 0px 16px;
+    box-shadow: 0px 6px 6px rgba(58, 51, 37, 0.3);
+
+    #header-title{
+        letter-spacing: 8px;
+    }
+    #header-logo {
+        a{color: black;}
+        width: 30pt;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bolder;
+        background-color: transparent;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30pt;
+        border: 1px dashed black;
+        transition: 0.1s ease-in;
+
+        &:hover {
+            a{color: yellow;}
+            background-color: black;
+            border: 1px solid black;
+            transform: scale(1.2);
+        }
+
+    }
+}
+#main {
+    min-height: 86vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#tabuleiro{
+    background-color: orange;
+    width: 424px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid orange;
+    margin: 82px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 140px 140px 140px;
+    grid-template-areas: "tl tl tl"
+    "a1 a2 a3"
+    "b1 b2 b3"
+    "c1 c2 c3";
+    gap: 2px 2px;
+    box-shadow: 0px 6px 6px rgba(58, 51, 37, 0.3);
+
+    #info{
+        background: linear-gradient(180deg, yellow, orange);
+        width: 100%;
+        height: 100px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        text-align: center;
+        line-height: 100px;
+        font-size: 28pt;
+        grid-area: tl;
+        strong{
+            font-weight: bolder;
+        }
+    }
+    .espaco{
+        background-color: rgb(133, 116, 84);
+        width: 140px;
+        height: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        color: yellow;
+        text-shadow: 0px 0px 10px rgb(255, 196, 0);
+        font:{
+            family: 'Modak', cursive;
+            size: 38pt;
+            weight: bold;
+        }
+    }
+    #a1 {grid-area: a1;}
+    #a2 {grid-area: a2;}
+    #a3 {grid-area: a3;}
+    #b1 {grid-area: b1;}
+    #b2 {grid-area: b2;}
+    #b3 {grid-area: b3;}
+    #c1 {grid-area: c1;}
+    #c2 {grid-area: c2;}
+    #c3 {grid-area: c3;}
+}
+
+#footer {
+    background-color: rgb(97, 83, 56);
+    padding: 6px 20px;
+    font-family: monospace;
+    font-size: 12pt;
+    display: flex;
+    justify-content: space-between;
+}

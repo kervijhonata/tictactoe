@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Modak&family=Montserrat&family=Seymour+One&display=swap");
+* {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  background-color: #534935;
+}
+
+a {
+  color: yellowgreen;
+  text-decoration: none;
+}
+
+a:focus, a:hover {
+  color: orange;
+}
+
+#header,
+#main,
+#footer {
+  max-width: 100vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#header {
+  background-color: yellow;
+  padding: 12px 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  border-radius: 0px 0px 16px 16px;
+  margin: 0px 16px 0px 16px;
+  -webkit-box-shadow: 0px 6px 6px rgba(58, 51, 37, 0.3);
+          box-shadow: 0px 6px 6px rgba(58, 51, 37, 0.3);
+}
+
+#header #header-title {
+  letter-spacing: 8px;
+}
+
+#header #header-logo {
+  width: 30pt;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  background-color: transparent;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30pt;
+  border: 1px dashed black;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+}
+
+#header #header-logo a {
+  color: black;
+}
+
+#header #header-logo:hover {
+  background-color: black;
+  border: 1px solid black;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#header #header-logo:hover a {
+  color: yellow;
+}
+
+#main {
+  min-height: 86vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#tabuleiro {
+  background-color: orange;
+  width: 424px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid orange;
+  margin: 82px auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 100px 140px 140px 140px;
+      grid-template-rows: 100px 140px 140px 140px;
+      grid-template-areas: "tl tl tl" "a1 a2 a3" "b1 b2 b3" "c1 c2 c3";
+  gap: 2px 2px;
+  -webkit-box-shadow: 0px 6px 6px rgba(58, 51, 37, 0.3);
+          box-shadow: 0px 6px 6px rgba(58, 51, 37, 0.3);
+}
+
+#tabuleiro #info {
+  background: -webkit-gradient(linear, left top, left bottom, from(yellow), to(orange));
+  background: linear-gradient(180deg, yellow, orange);
+  width: 100%;
+  height: 100px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  line-height: 100px;
+  font-size: 28pt;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: tl;
+}
+
+#tabuleiro #info strong {
+  font-weight: bolder;
+}
+
+#tabuleiro .espaco {
+  background-color: #857454;
+  width: 140px;
+  height: 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  color: yellow;
+  text-shadow: 0px 0px 10px #ffc400;
+  font-family: 'Modak', cursive;
+  font-size: 38pt;
+  font-weight: bold;
+}
+
+#tabuleiro #a1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: a1;
+}
+
+#tabuleiro #a2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: a2;
+}
+
+#tabuleiro #a3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: a3;
+}
+
+#tabuleiro #b1 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: b1;
+}
+
+#tabuleiro #b2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: b2;
+}
+
+#tabuleiro #b3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: b3;
+}
+
+#tabuleiro #c1 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: c1;
+}
+
+#tabuleiro #c2 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: c2;
+}
+
+#tabuleiro #c3 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: c3;
+}
+
+#footer {
+  background-color: #615338;
+  padding: 6px 20px;
+  font-family: monospace;
+  font-size: 12pt;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+/*# sourceMappingURL=style.css.map */
