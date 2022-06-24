@@ -46,26 +46,34 @@ function verifyWinning(){
     for(i=0; i<espacos.length; i++){
         if(espacos[0].dataset.played == espacos[1].dataset.played && espacos[1].dataset.played == espacos[2].dataset.played && espacos[2].dataset.played != ""){
             tellWinner(espacos[0].dataset.played);
+            return;
         }else if(espacos[3].dataset.played == espacos[4].dataset.played && espacos[4].dataset.played == espacos[5].dataset.played && espacos[5].dataset.played != ""){
-            tellWinner(espacos.dataset.played[3]);
+            tellWinner(espacos[3].dataset.played);
+            return;
         }else if(espacos[6].dataset.played == espacos[7].dataset.played && espacos[7].dataset.played == espacos[8].dataset.played && espacos[8].dataset.played != ""){
             tellWinner(espacos[6].dataset.played);
+            return;
         }else if(espacos[0].dataset.played == espacos[3].dataset.played && espacos[3].dataset.played == espacos[6].dataset.played && espacos[6].dataset.played != ""){
             tellWinner(espacos[0].dataset.played);
+            return;
         }else if(espacos[1].dataset.played == espacos[4].dataset.played && espacos[4].dataset.played == espacos[7].dataset.played && espacos[7].dataset.played != ""){
             tellWinner(espacos[1].dataset.played);
+            return;
         }else if(espacos[2].dataset.played == espacos[5].dataset.played && espacos[5].dataset.played == espacos[8].dataset.played && espacos[8].dataset.played != ""){
             tellWinner(espacos[2].dataset.played);
+            return;
         }else if(espacos[0].dataset.played == espacos[4].dataset.played && espacos[4].dataset.played == espacos[8].dataset.played && espacos[8].dataset.played != ""){
             tellWinner(espacos[0].dataset.played);
+            return;
         }else if(espacos[2].dataset.played == espacos[4].dataset.played && espacos[4].dataset.played == espacos[6].dataset.played && espacos[6].dataset.played != ""){
             tellWinner(espacos[2].dataset.played);
+            return;
         }
         
     }
 }
 function tellWinner(winner){
-    alert(`${winner} is the Winner!`);
+    console.log(`${winner} is the Winner!`);
     gameOver = true;
 }
 
